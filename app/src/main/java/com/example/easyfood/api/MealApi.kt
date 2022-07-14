@@ -1,6 +1,7 @@
 package com.example.easyfood.api
 
 import com.example.easyfood.model.CategoryList
+import com.example.easyfood.model.MealsByCategoryList
 import com.example.easyfood.model.MealList
 import retrofit2.Call
 import retrofit2.http.GET
@@ -15,5 +16,11 @@ interface MealApi {
     fun getMealDetails(@Query("i") id:String) : Call<MealList>
 
     @GET("filter.php?")
-    fun getPopularItem(@Query("c") categoryName: String): Call<CategoryList>
+    fun getPopularItem(@Query("c") categoryName: String): Call<MealsByCategoryList>
+
+    @GET("categories.php")
+    fun getCategories(): Call<CategoryList>
+
+    @GET("filter.php")
+    fun getMealByCategory(@Query("c")categoryName: String): Call<MealsByCategoryList>
 }
