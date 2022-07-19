@@ -1,13 +1,18 @@
 package com.example.easyfood.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "mealInformation")
 data class Meal(
-    val dateModified: Any,
+    @PrimaryKey
+//    val dateModified: Any,
     val idMeal: String,
     val strArea: String,
     val strCategory: String,
-    val strCreativeCommonsConfirmed: Any,
-    val strDrinkAlternate: Any,
-    val strImageSource: Any,
+//    val strCreativeCommonsConfirmed: Any,
+//    val strDrinkAlternate: Any,
+//    val strImageSource: Any,
     val strIngredient1: String,
     val strIngredient10: String,
     val strIngredient11: String,
@@ -52,6 +57,6 @@ data class Meal(
     val strMeasure8: String,
     val strMeasure9: String,
     val strSource: String,
-    val strTags: Any,
+//    val strTags: Any,
     val strYoutube: String
 )
