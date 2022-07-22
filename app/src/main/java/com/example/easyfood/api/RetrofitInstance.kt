@@ -1,6 +1,5 @@
 package com.example.easyfood.api
 
-import com.example.easyfood.model.Meal
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

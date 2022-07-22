@@ -61,11 +61,11 @@ class HomeFragment : Fragment() {
         observePopularItemLiveData()
         onPopularItemClick()
 
+        onCategoryClick()
         viewModel.getCategories()
         observeCategoriesLiveData()
 
         prepareCategoriesRecyclerView()
-        onCategoryClick()
     }
 
     private fun onCategoryClick() {
